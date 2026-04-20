@@ -1,0 +1,410 @@
+/*Asul and Vidaloka*/
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+
+:root{
+    --charcoal-black: #1C1C1C; 
+    --espresso-brown: #4B3621;
+    --warm-beige: #D6C0A5;
+    --heading-font: "Vidaloka";
+    --normal-text: 'Asul';
+    --sky-blue: #3498db;
+    --violet: #9b59b6;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--warm-beige);
+    text-decoration: none;
+}
+body{
+    font: 'Asul', 'Vidaloka', serif;
+    background-image: linear-gradient(to bottom, var(--charcoal-black) 10%, black ); 
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+ /* ==================================== */ 
+ /* Main Section */
+ /* ==================================== */
+
+/* Title */
+h1 {
+    font: bolder xx-large var(--heading-font);
+    color: var(--warm-beige);
+    text-transform: capitalize;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    z-index: 100;
+}
+
+@media(max-width: 460px){
+    h1{
+       left: 20%;
+    }
+}
+
+/* right bar */
+.rightbar{
+    position: absolute;
+    left: 4%;
+    width: 30px;
+    height: 100vh;
+
+    
+}
+
+.rightbar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 30px;
+    height: 70vh;
+    top: 15%;
+}
+
+.rightbar div a{
+    width: 7px;
+    height: 7px;
+    background-color: var(--warm-beige);
+    border-radius: 50%;
+    opacity: 40%;
+}
+.rightbar div a:hover{
+    opacity: 100%;
+    transform: scale(1.2);
+}
+
+
+.rightbar::after{
+    content: '';
+    position: absolute;
+    width: 0.4px;
+    height: 100vh;
+    background-color: var(--warm-beige);
+    left: 120%;
+    opacity: 40%;
+}
+
+
+/* ------------------ */
+/* Main content */
+section[class = 'main']{
+    width: 100%!important;
+    height: 100vh;
+    background-image: url("images/Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project - crop.jpg");
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+.main p, .main a{
+    position: absolute;
+    right: 10%;
+    width: 250px;   
+}
+
+.main p {
+    top: 20%;
+}
+
+.main a {
+    top: 70%;
+    background-color: transparent;
+    border: 3px var(--warm-beige) solid;
+    border-radius: 20px 20px 30px 20px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main .rembrandt {
+    top: 35%;
+}
+
+.main a:hover {
+    background: linear-gradient(135deg, var(--violet), var(--espresso-brown));
+    box-shadow:0 8px 5px rgba(155, 89, 182, 0.4);
+    color: #fff;
+}
+
+@media (max-width: 600px){
+    .main p, .main a{
+        width: 200px;
+    }
+    .main a {
+        top: 80%;
+    }
+}
+
+
+/* ---------------- */
+/* Nav */
+nav{
+    display: flex;
+    position: fixed;
+    left: 15%;
+    bottom: 20px;
+    flex-direction: row;
+    gap: 15px;
+    z-index: 1000;
+}
+
+nav a {
+    opacity: 60%;
+    font-size: 20px;
+}
+
+nav .active {
+    border-bottom: solid 2px var(--espresso-brown);
+    opacity: 100%;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    opacity: 80%;
+}
+
+
+/* ==================================== */
+/* paintings */
+/* ==================================== */
+section[class = 'paintings']{
+    margin-top: 5%;
+    width: 100%;
+}
+
+.section-name {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-size: xx-large;
+    color: var(--warm-beige);
+    font-family: Vidaloka;
+}
+
+
+.paintings .painting {
+    width: 100%;
+    margin: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.paintings img{
+    height: 280px;
+    width: auto;
+    border-radius: 6%;
+    filter: contrast(1);
+}
+.paintings img:hover{
+    filter: contrast(2);
+}
+
+.painting .name{
+    margin-top: 10px;
+}
+
+.paintings .artist{
+    margin: 2px;
+    opacity: 40%;
+}
+
+
+
+/* ==================================== */
+/* theme */
+/* ==================================== */
+.themes {
+    background-image: url('images/The Supper at Emmaus.jpg');
+    background-size: cover;
+    height: 900px;
+    background-position: top;
+    position: relative;
+    filter: contrast(1.4);
+}
+
+.themes h3{
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.themes::before{
+    top: 0;
+    background: linear-gradient(to bottom, rgb(28, 28, 28) , transparent);
+    z-index: 7;
+}
+.themes::after{
+    bottom: 0;
+    background: linear-gradient(to top, var(--charcoal-black), rgba(255,255,255,0));
+}
+.themes::after, .themes::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.themes h5{
+    font: var(--heading-font);
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 35px;
+    cursor: text;
+}
+.themes .content p{
+    position: absolute;
+    bottom: 25%;
+    width: 35%;
+    left: 5%;
+    cursor: text;
+}
+.themes .artist{
+    bottom: 20% !important;
+    font-weight: bold;
+    font-size: large;
+}
+.themes .artist::after{
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--warm-beige);
+}
+.notes .note {
+    position: absolute;
+    width: 30%;
+    opacity: 0.7;
+}
+
+@media (min-width: 660px){
+    .themes h5{
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px){
+    .themes h5{font-size: large; font-weight: bolder;}
+    .notes p:nth-child(1) {right: 5%; top: 20%; width: 35%;}
+    .notes p:nth-child(2) {top: 20%; left: 5%; width: 40%;}
+    .notes p:nth-child(3) {left: 17%!important; top: 41%!important; width: 75%!important;}
+    .notes p:nth-child(4) {right: 5%; bottom: 30%;}
+    .themes .content p {width: 57%;}
+}
+
+.notes{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+
+}
+.notes p:nth-child(1) {right: 5%; top: 15%;}
+.notes p:nth-child(2) {top: 20%; left: 5%; width: 30%;}
+.notes p:nth-child(3) {left: 10%; top: 30%; width: 30%;}
+.notes p:nth-child(4) {right: 5%; bottom: 30%;}
+
+
+
+
+/* ==================================== */
+/* Toolkit */
+/* ==================================== */
+.toolkit {position: relative; width: 100%; height: fit-content; z-index: 0;}
+.toolkit img {width: 100%; filter: sepia(10); position: relative; z-index: 2;}
+.toolkit-context{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.toolkit-context div{position:absolute; width: 20%;}
+.toolkit-context div h5 {font-size: 130%; color: blanchedalmond;}
+.toolkit-context div::before{
+    content: '';
+    width: 80%;
+    height: 1%;
+    top: -2%;
+    left: 1%;
+    position: absolute;
+    background-color: var(--warm-beige);
+}
+
+.toolkit-context div:nth-child(1){top: -90%; left: 5%;}
+.toolkit-context div:nth-child(2){top: -75%; right: 20%;}
+.toolkit-context div:nth-child(3){top: -25%; right: 2%; width: 15%;}
+.toolkit::after{
+    content: '';
+    background-image: url("images/The Ecstasy of Saint Teresa - another view.webp");
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    border: 2px solid var(--warm-beige);
+}
+
+@media (max-width:880px)  and  (min-width:631px){
+    .toolkit-context div:nth-child(2){top: -90%; right: 5%; width: 35%;}
+    .toolkit-context div:nth-child(3){top: -45%; right: 5%; width: 30%; ; z-index: 3;}
+    .toolkit-context div:nth-child(3):before{background-color: var(--sky-blue);}
+    .toolkit-context div:nth-child(3) h5, .toolkit-context div:nth-child(3) p{color: var(--sky-blue);}
+}
+@media (max-width:630px) {
+    .toolkit{
+        display: flex;
+        flex-direction: column; /* This stacks children (h3, img, div) vertically */
+        align-items: center;    /* Keeps everything centered */
+        padding: 20px;
+        /* overflow: hidden; */
+        height: fit-content;
+    }
+    .toolkit-context{
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+        height: auto;
+    }
+    .toolkit-context div{
+        width: 40%;
+        border-color: red;
+    }
+}
+
+
+
+/* ==================================== */
+/* footer */
+/* ==================================== */
+footer{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    align-content: center;
+    margin-top: 30px;
+    position: static;
+   
+}
